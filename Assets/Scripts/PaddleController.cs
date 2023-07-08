@@ -13,7 +13,6 @@ public class PaddleController : MonoBehaviour
     [SerializeField] float springPower;
 
     [SerializeField] Rigidbody ball;
-    Vector3 ballStartPosition;
     void Start()
     {
         JointSpring jointSpring = leftPaddle.spring;
@@ -24,7 +23,6 @@ public class PaddleController : MonoBehaviour
         jointSpring.spring = springPower;
         rightPaddle.spring = jointSpring;
 
-        ballStartPosition = ball.position;
     }
 
     void Update() 
@@ -46,11 +44,7 @@ public class PaddleController : MonoBehaviour
         {
             ChangeHingePosition(rightPaddle, false, false);
         }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ball.position = ballStartPosition;
-            ball.velocity = Vector3.zero;
-        }
+        
     }
 
     void ChangeHingePosition(HingeJoint paddleJoint, bool stressJoint, bool isLeftPaddle)

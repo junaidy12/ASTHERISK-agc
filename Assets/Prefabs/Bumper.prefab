@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 764031089186272183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 764031090090496444}
@@ -63,8 +63,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 0}
-  multiplier: 5
-  color: {r: 0.6698113, g: 0.0979441, b: 0.0979441, a: 1}
+  multiplier: 10
+  material:
+    color: {r: 1, g: 0, b: 0, a: 1}
 --- !u!95 &4387713273848073755
 Animator:
   serializedVersion: 5
